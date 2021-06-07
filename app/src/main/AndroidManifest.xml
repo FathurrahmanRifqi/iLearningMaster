@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ilearning">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ILearning">
+        <activity android:name=".view.lesson.LessonListActivity"></activity>
+        <activity android:name=".view.lesson.LessonManageActivity" />
+        <activity android:name=".view.lesson.LessonListPelatihActivity" />
+        <activity android:name=".view.course.CourseManageActivity" />
+        <activity android:name=".view.course.CourseListPelatihActivity" />
+        <activity android:name=".view.ProfileActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:noHistory="true" />
+        <activity android:name=".view.users.UsersListActivity" />
+        <activity android:name=".view.pelatih.PelatihHomeActivity" />
+        <activity android:name=".view.karyawan.KaryawanHomeActivity" />
+        <activity android:name=".view.admin.AdminHomeActivity" />
+        <activity android:name=".view.course.CourseListActivity" />
+        <activity
+            android:name=".view.SplashActivity"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
