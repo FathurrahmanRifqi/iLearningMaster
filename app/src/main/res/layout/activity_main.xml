@@ -1,101 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"> <!-- usually the name of the Java file associated with this activity -->
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/montserrat_bold"
-        android:text="@string/app_name"
-        android:textSize="96px"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="2pt"
+        android:paddingRight="2pt"
+        >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat_light"
-        android:text="Belajar dimana saja dan kapan saja"
-        android:textSize="32px"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.0" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textSize="72px"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="309dp"
-        android:layout_height="280dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/ic_illustration_login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_light"
+            android:text="Belajar dimana saja dan kapan saja"
+            android:textSize="22px"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="310dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/bg_txt_username"
-        android:fontFamily="@font/montserrat_semibold"
-        android:paddingStart="50dp"
-        android:paddingLeft="50dp"
-        android:textSize="40px"
-        android:hint="Email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="309dp"
+            android:layout_height="280dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/ic_illustration_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="311dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/bg_txt_password"
-        android:fontFamily="@font/montserrat_semibold"
-        android:inputType="textPassword"
-        android:paddingStart="50dp"
-        android:paddingLeft="50dp"
-        android:textSize="40px"
-        android:hint="Password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="310dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="32dp"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/bg_txt_username"
+            android:fontFamily="@font/montserrat_semibold"
+            android:paddingStart="50dp"
+            android:paddingLeft="50dp"
+            android:textSize="30px"
+            android:hint="Email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <ImageButton
-        android:id="@+id/login"
-        android:layout_width="86dp"
-        android:layout_height="86dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/bg_btn_login"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.866"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.0" />
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="311dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_txt_password"
+            android:fontFamily="@font/montserrat_semibold"
+            android:inputType="textPassword"
+            android:paddingStart="50dp"
+            android:paddingLeft="50dp"
+            android:textSize="30px"
+            android:hint="Password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:fontFamily="@font/montserrat_semibold"
-        android:text="Sign In"
-        android:textSize="48px"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/login"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.017" />
+        <ImageButton
+            android:id="@+id/login"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/bg_btn_login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.866"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password"
+            app:layout_constraintVertical_bias="0.0" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Sign In"
+            android:textSize="30px"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/login"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password"
+            app:layout_constraintVertical_bias="0.017" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
